@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span>StudentPortfolio</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#" data-page="home" class="active">Home</a></li>
+                    <li><a href="#" data-page="about">About</a></li>
+                    <li><a href="#" data-page="projects">Projects</a></li>
+                    <li><a href="#" data-page="skills">Skills</a></li>
+                    <li><a href="#" data-page="contact">Contact</a></li>
+                    <li class="auth-section">
+                        <div id="guest-links">
+                            <a href="#" data-page="login" class="btn-login">Login</a>
+                            <a href="#" data-page="register" class="btn-register">Register</a>
+                        </div>
+                        <div id="user-links" style="display: none;">
+                            <a href="#" data-page="dashboard" class="user-menu">
+                                <i class="fas fa-user"></i>
+                                <span id="username-display">User</span>
+                            </a>
+                            <a href="#" id="logout-btn" class="btn-logout">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Visitor Counter -->
+    <div class="visitor-counter">
+        <i class="fas fa-users"></i> <span id="visitor-count">1,245</span> Visitors
+    </div>
+
+    <!-- Home Page -->
+
+<div id="home" class="page active">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Student Portfolio</h1>
+            <p>I'm a passionate web development student showcasing my projects and skills. Explore my work and get to know me better!</p>
+            <a href="#" data-page="projects" class="btn">View My Work</a>
+        </div>
+    </section>
+
+    <!-- About Section Preview -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Me</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3 id="home-username">Hello! I'm <span class="dynamic-username">Rahul Patel</span></h3>
+                    <p class="dynamic-bio">I'm a web development student with a passion for creating beautiful, functional websites and applications. I enjoy turning complex problems into simple, intuitive solutions.</p>
+                    <p class="dynamic-hobbies">When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or hiking in the great outdoors.</p>
+                    <a href="#" data-page="about" class="btn">Learn More About Me</a>
+                </div>
+                <div class="about-image">
+                    <img id="dynamic-user-photo" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Student Image">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>About Me</h2>
+                </div>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3 id="about-username">Hello! I'm Rahul Patel</h3>
+                        <p>I'm a web development student with a passion for creating beautiful, functional websites and applications. I enjoy turning complex problems into simple, intuitive solutions.</p>
+                        <p>When I'm not coding, you can find me exploring new technologies, contributing to open source projects, or hiking in the great outdoors.</p>
+                        <p>My goal is to continue growing as a developer and eventually work on projects that make a positive impact on people's lives.</p>
+                        
+                        <h3>Education</h3>
+                        <p>I'm currently pursuing my degree in Computer Science with a focus on web development at University of Technology. I've completed several online courses in frontend and backend development to enhance my skills.</p>
+                        
+                        <h3>Experience</h3>
+                        <p>I've worked on various projects during my studies, including freelance work for local businesses and personal projects that allow me to experiment with new technologies and techniques.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Student Image">
+                        <div style="margin-top: 20px; text-align: center;">
+                            <a href="#" class="btn">Download Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Projects Page -->
+    <div id="projects" class="page">
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Projects</h2>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="E-commerce Project">
+                        </div>
+                        <div class="project-info">
+                            <h3>E-commerce Website</h3>
+                            <p>A fully functional e-commerce site with product catalog, shopping cart, and checkout system.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1557821552-17105176677c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Blog Platform">
+                        </div>
+                        <div class="project-info">
+                            <h3>Blog Platform</h3>
+                            <p>A responsive blog platform with user authentication, CRUD operations, and comment system.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Weather App">
+                        </div>
+                        <div class="project-info">
+                            <h3>Weather Application</h3>
+                            <p>A weather app that displays current weather and forecast using a third-party API.</p>
+                            <a href="#" class="btn">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Skills Page -->
+    <div id="skills" class="page">
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>My Skills</h2>
+                </div>
+                <div class="skills-container">
+                    <div class="skills-column">
+                        <div class="skill">
+                            <div class="skill-info">
+                                <span>HTML5</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info">
+                                <span>CSS3</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info">
+                                <span>JavaScript</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skills-column">
+                        <div class="skill">
+                            <div class="skill-info">
+                                <span>React</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info">
+                                <span>Node.js</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <div class="skill-info">
+                                <span>MongoDB</span>
+                                <span>65%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <section class="section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Contact Me</h2>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="Your Name">
+                        <div class="error" id="nameError">Please enter your name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="Your Email">
+                        <div class="error" id="emailError">Please enter a valid email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" class="form-control" placeholder="Subject">
+                        <div class="error" id="subjectError">Please enter a subject</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" class="form-control" placeholder="Your Message"></textarea>
+                        <div class="error" id="messageError">Please enter your message</div>
+                    </div>
+                    <button type="submit" class="btn">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Login Page -->
+    <div id="login" class="page">
+        <section class="section auth-container">
+            <div class="auth-form">
+                <h2>Login to Your Account</h2>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" class="form-control" placeholder="Your Email">
+                        <div class="error" id="loginEmailError">Please enter a valid email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" class="form-control" placeholder="Your Password">
+                        <div class="error" id="loginPasswordError">Please enter your password</div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" id="remember-me"> Remember me
+                        </label>
+                        <a href="#" class="forgot-password">Forgot Password?</a>
+                    </div>
+                    <button type="submit" class="btn btn-login">Login</button>
+                    <div class="auth-divider"></div>
+                    <p class="auth-switch">
+                        Don't have an account? <a href="#" data-page="register">Register here</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- Register Page -->
+    <div id="register" class="page">
+        <section class="section auth-container">
+            <div class="auth-form">
+                <h2>Create Your Account</h2>
+                <form id="registerForm">
+                    <div class="form-group">
+                        <label for="register-name">Full Name</label>
+                        <input type="text" id="register-name" class="form-control" placeholder="Your Full Name">
+                        <div class="error" id="registerNameError">Please enter your name</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-email">Email</label>
+                        <input type="email" id="register-email" class="form-control" placeholder="Your Email">
+                        <div class="error" id="registerEmailError">Please enter a valid email</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-username">Username</label>
+                        <input type="text" id="register-username" class="form-control" placeholder="Choose a username">
+                        <div class="error" id="registerUsernameError">Please choose a username</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-password">Password</label>
+                        <input type="password" id="register-password" class="form-control" placeholder="Your Password">
+                        <div class="error" id="registerPasswordError">Password must be at least 8 characters</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="register-confirm">Confirm Password</label>
+                        <input type="password" id="register-confirm" class="form-control" placeholder="Confirm Password">
+                        <div class="error" id="registerConfirmError">Passwords do not match</div>
+                    </div>
+                    <div class="form-options">
+                        <label class="checkbox">
+                            <input type="checkbox" id="terms"> I agree to the <a href="#">Terms of Service</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-register">Create Account</button>
+                    <div class="auth-divider"></div>
+                    <p class="auth-switch">
+                        Already have an account? <a href="#" data-page="login">Login here</a>
+                    </p>
+                </form>
+            </div>
+        </section>
+    </div>
+
+<!-- User Dashboard Page -->
+<div id="dashboard" class="page">
+    <section class="section">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="user-profile">
+                    <div class="profile-avatar">
+                        <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Profile" id="user-avatar">
+                        <button type="button" class="btn-avatar-edit" onclick="document.getElementById('avatar-input').click()">
+                            <i class="fas fa-camera"></i>
+                        </button>
+                        <!-- Hidden file input for avatar upload -->
+                        <input type="file" id="avatar-input" accept="image/*" style="display: none;" onchange="handleAvatarUpload(event)">
+                    </div>
+                    <div class="profile-info">
+                        <h2 id="dashboard-username">Username</h2>
+                        <p id="dashboard-email">user@example.com</p>
+                        <p class="member-since">Member since <span id="join-date">2024</span></p>
+                    </div>
+                </div>
+                <div class="profile-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="projects-count">0</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="skills-count">0</span>
+                        <span class="stat-label">Skills</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="visits-count">0</span>
+                        <span class="stat-label">Profile Visits</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="dashboard-nav">
+                    <button class="tab-btn active" data-tab="profile">Profile</button>
+                    <button class="tab-btn" data-tab="projects">My Projects</button>
+                    <button class="tab-btn" data-tab="settings">Settings</button>
+                </div>
+
+                <div class="tab-content">
+                    <!-- Profile Tab -->
+                    <div id="tab-profile" class="tab-pane active">
+                        <h3>Edit Profile</h3>
+                        <form id="profile-form" class="profile-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profile-name">Full Name</label>
+                                    <input type="text" id="profile-name" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-username">Username</label>
+                                    <input type="text" id="profile-username" class="form-control">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="profile-bio">Bio</label>
+                                <textarea id="profile-bio" class="form-control" placeholder="Tell us about yourself"></textarea>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="profile-website">Website</label>
+                                    <input type="url" id="profile-website" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="profile-location">Location</label>
+                                    <input type="text" id="profile-location" class="form-control">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn">Save Changes</button>
+                        </form>
+                    </div>
+
+                    <!-- Projects Tab -->
+                    <div id="tab-projects" class="tab-pane">
+                        <div class="projects-header">
+                            <h3>My Projects</h3>
+                            <button class="btn" id="add-project-btn">Add Project</button>
+                        </div>
+                        <div class="user-projects" id="user-projects-list">
+                            <!-- Projects will be loaded here dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Settings Tab -->
+                    <div id="tab-settings" class="tab-pane">
+                        <h3>Account Settings</h3>
+                        <div class="settings-section">
+                            <h4>Change Avatar</h4>
+                            <div class="avatar-upload-section">
+                                <div class="current-avatar-preview">
+                                    <img src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Current Avatar" id="settings-avatar">
+                                </div>
+                                <div class="avatar-upload-controls">
+                                    <p>Upload a new profile picture (JPG, PNG, GIF - max 2MB)</p>
+                                    <input type="file" id="avatar-upload" accept="image/*" class="form-control">
+                                    <div class="avatar-preview" id="avatar-preview" style="display: none;">
+                                        <img id="preview-image" alt="Preview">
+                                        <button type="button" class="btn btn-secondary" onclick="cancelAvatarUpload()">Cancel</button>
+                                        <button type="button" class="btn btn-primary" onclick="saveAvatar()">Save Avatar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="settings-section">
+                            <h4>Change Password</h4>
+                            <form id="password-form">
+                                <div class="form-group">
+                                    <label for="current-password">Current Password</label>
+                                    <input type="password" id="current-password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="new-password">New Password</label>
+                                    <input type="password" id="new-password" class="form-control">
+                                </div>
+                                <div class="form-group">
+                                    <label for="confirm-new-password">Confirm New Password</label>
+                                    <input type="password" id="confirm-new-password" class="form-control">
+                                </div>
+                                <button type="submit" class="btn">Update Password</button>
+                            </form>
+                        </div>
+                        <div class="settings-section">
+                            <h4>Privacy Settings</h4>
+                            <div class="privacy-options">
+                                <label class="checkbox">
+                                    <input type="checkbox" id="profile-public"> Make profile public
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="email-public"> Show email publicly
+                                </label>
+                                <label class="checkbox">
+                                    <input type="checkbox" id="project-notifications"> Project notifications
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Student Portfolio</h3>
+                    <p>A showcase of my skills, projects, and journey as a web development student.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#" data-page="home">Home</a></li>
+                        <li><a href="#" data-page="about">About</a></li>
+                        <li><a href="#" data-page="projects">Projects</a></li>
+                        <li><a href="#" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect With Me</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Student Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
